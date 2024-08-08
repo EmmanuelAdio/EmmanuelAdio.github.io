@@ -1,0 +1,202 @@
+/* Dark mode */
+/* 
+--text: #eaecf5;
+--background: #070913;
+--primary: #3c4eb4;
+--secondary: #1b2865;
+--accent: #2238a5; */
+
+/* 
+@media (prefers-color-scheme: light) {
+  :root {
+    --text-50: #eeeff7;
+    --text-100: #dde0ee;
+    --text-200: #bac1de;
+    --text-300: #98a2cd;
+    --text-400: #7582bd;
+    --text-500: #5363ac;
+    --text-600: #424f8a;
+    --text-700: #323c67;
+    --text-800: #212845;
+    --text-900: #111422;
+    --text-950: #080a11;
+
+    --background-50: #eceef8;
+    --background-100: #dadef1;
+    --background-200: #b5bce3;
+    --background-300: #8f9bd6;
+    --background-400: #6a7ac8;
+    --background-500: #4558ba;
+    --background-600: #374795;
+    --background-700: #293570;
+    --background-800: #1c234a;
+    --background-900: #0e1225;
+    --background-950: #070913;
+
+    --primary-50: #eceef9;
+    --primary-100: #d9ddf2;
+    --primary-200: #b3bae6;
+    --primary-300: #8c98d9;
+    --primary-400: #6675cc;
+    --primary-500: #4053bf;
+    --primary-600: #334299;
+    --primary-700: #263273;
+    --primary-800: #19214d;
+    --primary-900: #0d1126;
+    --primary-950: #060813;
+
+    --secondary-50: #ebeefa;
+    --secondary-100: #d7dcf4;
+    --secondary-200: #aeb9ea;
+    --secondary-300: #8696df;
+    --secondary-400: #5e74d4;
+    --secondary-500: #3651c9;
+    --secondary-600: #2b41a1;
+    --secondary-700: #203079;
+    --secondary-800: #152051;
+    --secondary-900: #0b1028;
+    --secondary-950: #050814;
+
+    --accent-50: #eaedfb;
+    --accent-100: #d5daf6;
+    --accent-200: #aab6ee;
+    --accent-300: #8091e5;
+    --accent-400: #566cdc;
+    --accent-500: #2b47d4;
+    --accent-600: #2339a9;
+    --accent-700: #1a2b7f;
+    --accent-800: #111d55;
+    --accent-900: #090e2a;
+    --accent-950: #040715;
+
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-50: #080a11;
+    --text-100: #111422;
+    --text-200: #212845;
+    --text-300: #323c67;
+    --text-400: #424f8a;
+    --text-500: #5363ac;
+    --text-600: #7582bd;
+    --text-700: #98a2cd;
+    --text-800: #bac1de;
+    --text-900: #dde0ee;
+    --text-950: #eeeff7;
+
+    --background-50: #070913;
+    --background-100: #0e1225;
+    --background-200: #1c234a;
+    --background-300: #293570;
+    --background-400: #374795;
+    --background-500: #4558ba;
+    --background-600: #6a7ac8;
+    --background-700: #8f9bd6;
+    --background-800: #b5bce3;
+    --background-900: #dadef1;
+    --background-950: #eceef8;
+
+    --primary-50: #060813;
+    --primary-100: #0d1126;
+    --primary-200: #19214d;
+    --primary-300: #263273;
+    --primary-400: #334299;
+    --primary-500: #4053bf;
+    --primary-600: #6675cc;
+    --primary-700: #8c98d9;
+    --primary-800: #b3bae6;
+    --primary-900: #d9ddf2;
+    --primary-950: #eceef9;
+
+    --secondary-50: #050814;
+    --secondary-100: #0b1028;
+    --secondary-200: #152051;
+    --secondary-300: #203079;
+    --secondary-400: #2b41a1;
+    --secondary-500: #3651c9;
+    --secondary-600: #5e74d4;
+    --secondary-700: #8696df;
+    --secondary-800: #aeb9ea;
+    --secondary-900: #d7dcf4;
+    --secondary-950: #ebeefa;
+
+    --accent-50: #040715;
+    --accent-100: #090e2a;
+    --accent-200: #111d55;
+    --accent-300: #1a2b7f;
+    --accent-400: #2339a9;
+    --accent-500: #2b47d4;
+    --accent-600: #566cdc;
+    --accent-700: #8091e5;
+    --accent-800: #aab6ee;
+    --accent-900: #d5daf6;
+    --accent-950: #eaedfb;
+
+  }
+}
+
+*/
+
+
+/* 
+@media (prefers-color-scheme: light) {
+  :root {
+    --text: #0a0c15;
+    --background: #eceef8;
+    --primary: #4b5dc3;
+    --secondary: #9aa8e4;
+    --accent: #5a70dd;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #eaecf5;
+    --background: #070913;
+    --primary: #3c4eb4;
+    --secondary: #1b2865;
+    --accent: #2238a5;
+  }
+}
+*/
+
+
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
