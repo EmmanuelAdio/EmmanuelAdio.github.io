@@ -1,12 +1,12 @@
 import React from "react";
 import { Fragment } from "react";
 
-// interface Props {
-//   projects: string[];
-//   heading: string;
-// }
+interface Props {
+  projects: string[];
+  heading: string;
+}
 
-function ProjectList(projects, heading) {
+function ProjectList({projects, heading} : Props) {
   return (
     <>
       <h1>{heading}</h1>

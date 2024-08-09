@@ -1,5 +1,43 @@
+
+:root{
+  --text: #eaecf5;
+  --background: #070913;
+  --primary: #3c4eb4;
+  --secondary: #1b2865;
+  --accent: #2238a5;
+}
+
+:root {
+  --bs-primary: var(--primary);
+  --bs-secondary: var(--secondary);
+  --bs-body-bg: var(--background);
+  --bs-body-color: var(--text);
+  --bs-link-color: var(--accent);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --text: #0a0c15;
+    --background: #eceef8;
+    --primary: #4b5dc3;
+    --secondary: #9aa8e4;
+    --accent: #5a70dd;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #eaecf5;
+    --background: #070913;
+    --primary: #3c4eb4;
+    --secondary: #1b2865;
+    --accent: #2238a5;
+  }
+}
+
+
 body {
   margin: 0;
+  background-color: var(--background);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -10,4 +48,51 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Page line css */
+.PageLine{
+  position: 'fixed';
+  bottom : 0,
+}
+
+
+/* Introduction.css */
+.page {
+  min-height: 80vh;
+  justify-content: flex-start; /* Keep title at the top */
+  text-align: center;
+}
+
+.page h2{
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+.textBox {
+  display: flex;
+  flex-direction: column; /* Align items in a column */
+  justify-content: flex-start; /* Keep title at the top */
+  align-items: center; /* Center content horizontally */
+  /* justify-content: center; 
+  align-items: center; */
+  padding: 20px 0;
+  text-align: center;
+  height: 100%;
+}
+
+.textBox h5 {
+  margin-bottom: 20px; /* Space between the title and the buttons */
+}
+
+.textBox .tech-container{
+  margin: 5px 0; /* Space between the buttons */
+  display: flex;
+  flex-wrap: wrap; /* Allow buttons to wrap to the next line */
+  justify-content: center; /* Center buttons horizontally */
+  gap: 10px; /* Space between the buttons */
+  width: 100%;
 }
