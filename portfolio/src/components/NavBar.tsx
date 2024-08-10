@@ -20,7 +20,7 @@ export default function NavBar() {
         <>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark ">
           <div className="container-fluid">
-            <a className="navbar-brand" href="#">**EMANLOGO**</a>
+            <a className="navbar-brand" href="#">EA</a>
 
             {/* This is the toggles nav bar button then the screen shrinks */}
             <button
@@ -35,7 +35,7 @@ export default function NavBar() {
               <span className="navbar-toggler-icon"></span>
             </button>
 
-            <div className="collapse navbar-collapse" id="navbarNav" style={{paddingLeft : "200px"}}>
+            <div className="collapse navbar-collapse" id="navbarNav" style={{paddingLeft : "400px"}}>
               <ul className="navbar-nav mx-auto ">
                 <li className="nav-item active">
                   <a className="nav-link" href="#">About</a>

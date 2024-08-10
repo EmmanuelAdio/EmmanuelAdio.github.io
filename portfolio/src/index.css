@@ -96,3 +96,46 @@ h1 {
   gap: 10px; /* Space between the buttons */
   width: 100%;
 }
+
+/* Project CSS */
+.project-card{
+  width: auto;
+  margin: auto;
+  margin-top: 20px;
+  border: 1px solid white;
+  transition: all 0.3s ease;
+  padding : 20px
+}
+
+.project-card:hover {
+  border-color: #007bff; /* Change border color on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+  transform: translateY(-5px); /* Slight move up effect */
+}
+
+.card-description {
+  max-height: 4.5rem; /* Limit the description height */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Add ellipsis for overflow text */
+  white-space: nowrap; /* Prevent wrapping */
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.all-projects-btn {
+  position: absolute;
+  bottom: 0; /* Align to the bottom of the container */
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+

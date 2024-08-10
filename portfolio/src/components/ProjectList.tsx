@@ -1,22 +1,40 @@
 import React from "react";
 import { Fragment } from "react";
+import ProjectCard from "./ProjectCard";
 
-interface Props {
-  projects: string[];
-  heading: string;
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
+
+
+interface Project {
+  id: string;
+  title: string;
+  description: string;
+  demo?: string;
+  repo: string;
+  image? : string;
 }
 
-function ProjectList({projects, heading} : Props) {
+interface Props {
+  projects: Project[];
+}
+
+function ProjectList({ projects }: Props) {
   return (
     <>
-      <h1>{heading}</h1>
-      <ul>
+      <Row xs={1} md={3} className="g-4">
         {projects.map((project, index) => (
-          <li className="projectCard" key={index}>
-            {project}
-          </li>
+          <Col className="project-card" key={index}>
+            <ProjectCard
+              title={project.title}
+              description={project.description}
+              demo={project.demo}
+              repo={project.repo}
+              image={"/assets/PracticePic.jpg"}
+            ></ProjectCard>
+          </Col>
         ))}
-      </ul>
+      </Row>
     </>
   );
 }
