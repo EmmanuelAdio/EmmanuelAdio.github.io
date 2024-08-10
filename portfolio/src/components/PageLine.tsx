@@ -6,9 +6,7 @@ export default function PageLine(){
         <>
         <div className="pageLine">
             <br />
-            <br />
                 <hr />
-            <br />
             <br />
         </div>
         

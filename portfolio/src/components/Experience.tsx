@@ -1,13 +1,15 @@
 import React from "react";
 import { Fragment } from "react";
+import PageLine from "./PageLine";
 
 interface Props {
   id: string;
   text: string;
 }
-export default function Experience({ id, text }: Props) {
+export default function Experience() {
   return (
-    <section className="Experience">
+    <>
+    <div className="page Experience">
       <h2>EXPERIENCE</h2>
       <div className="Experience-list">
         <div className="Experience-card">Experience 1</div>
@@ -15,6 +17,8 @@ export default function Experience({ id, text }: Props) {
         <div className="Experience-card">Experience 3</div>
       </div>
       {/* <Button text="All Experience" /> */}
-    </section>
+    </div>
+    <PageLine></PageLine>
+    </>
   );
 }

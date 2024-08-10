@@ -1,13 +1,20 @@
 import React from "react";
 import { Fragment } from "react";
+import PageLine from "./PageLine";
 
 interface Props{
     id : string;
     text : string;
 }
-export default function Contacts({id, text} : Props){
+export default function Contact(){
 
     return (
-        <h1>This is a place holer for TextBox</h1>
+        <>
+        <div className="page">
+        <h2>CONTACT</h2>
+
+        </div>
+        <PageLine></PageLine>
+        </>
     );
 }

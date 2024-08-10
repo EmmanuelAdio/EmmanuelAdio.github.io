@@ -59,7 +59,7 @@ code {
 
 /* Introduction.css */
 .page {
-  min-height: 80vh;
+  min-height: 90vh;
   justify-content: flex-start; /* Keep title at the top */
   text-align: center;
 }

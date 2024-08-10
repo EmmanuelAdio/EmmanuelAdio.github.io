@@ -4,7 +4,7 @@ import PageLine from "./components/PageLine";
 import Introduction from "./components/Introduction";
 import Projects from "./components/Projects";
 import Experience from "./components/Experience";
-import Contacts from "./components/Contact";
+import Contact from "./components/Contact";
 
 import React from "react";
 
@@ -17,6 +17,8 @@ function App(){
     <>
     <Introduction></Introduction>
     <Projects></Projects>
+    <Experience></Experience>
+    <Contact></Contact>
     <PageLine></PageLine>
     </>
     ); 

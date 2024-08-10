@@ -1,6 +1,9 @@
 import React from "react";
 import { Fragment } from "react";
+
+
 import ProjectList from "./ProjectList";
+import PageLine from "./PageLine";
 
 
 interface Props{
@@ -14,9 +17,11 @@ export default function Projects(){
 
   return (
       <>
-        <h2>PROJECTS</h2>
-        <ProjectList projects={Projects} heading={"Projects lists"}></ProjectList>
-        {/* <Button text="All Projects" /> */}
+      <div className="page container-fluid p-4">
+      <h2>PROJECTS</h2>
+    
+      </div>
+      <PageLine></PageLine>
       </>
     );
 }
