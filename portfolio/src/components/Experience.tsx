@@ -2,21 +2,59 @@ import React from "react";
 import { Fragment } from "react";
 import PageLine from "./PageLine";
 
-interface Props {
+import ExperienceCard from "./ExperienceCard";
+import ExperienceList from "./ExperienceList";
+
+
+interface Experience {
   id: string;
-  text: string;
+  title: string;
+  description: string;
 }
+
+interface Props {
+  experience : Experience[];
+}
+
+// Define a list of project objects
+const experiences: Experience[] = [
+  {
+    id: "1",
+    title: "Experience 1",
+    description: "This is the first project.",
+  },
+  {
+    id: "2",
+    title: "Experience 2",
+    description: "This is the second project.This is the second project.This is the second project.This is the second project.This is the second project.This is the second project.This is the second project.This is the second project.This is the second project.This is the second project.This is the second project.This is the second project.This is the second project.This is the second project.This is the second project.This is the second project.This is the second project.This is the second project.This is the second project.",
+  },
+  {
+    id: "3",
+    title: "Experience 3",
+    description: "This is the third project.",
+  },
+  {
+    id: "4",
+    title: "Experience 4",
+    description: "This is the third project.",
+  },
+  {
+    id: "5",
+    title: "Experience 5",
+    description: "This is the third project.",
+  },
+  
+  
+  // Add more projects as needed
+];
 export default function Experience() {
   return (
     <>
-    <div className="page Experience">
+    <div className="page experience container-fluid p-4 position-relative">
       <h2>EXPERIENCE</h2>
-      <div className="Experience-list">
-        <div className="Experience-card">Experience 1</div>
-        <div className="Experience-card">Experience 2</div>
-        <div className="Experience-card">Experience 3</div>
-      </div>
-      {/* <Button text="All Experience" /> */}
+      <ExperienceList experiences={experiences}></ExperienceList>
+
+      {/* <button id = "all-experiences-btn" className="btn btn-primary all-projects-btn">All Experiences</button> */}
     </div>
     <PageLine></PageLine>
     </>

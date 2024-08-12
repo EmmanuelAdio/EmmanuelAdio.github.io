@@ -66,16 +66,15 @@ const projects: Project[] = [
 
 
 export default function Projects(){
-  //let Projects = ["Project 1", "Projects 2", "Project 3", "Project 4", "Project 5", "Project 6"];
 
   return (
       <>
-      <div className="page container-fluid p-4 position-relative">
+      <div className="page projects container-fluid p-4 position-relative">
       <h2>PROJECTS</h2>
       <br />
         <ProjectList projects={projects}></ProjectList>
 
-        <button id = "all-projects-btn" className="btn btn-primary all-projects-btn">All projects</button>
+        {/* <button id = "all-projects-btn" className="btn btn-primary all-projects-btn">All projects</button> */}
       </div>
       
       <PageLine></PageLine>

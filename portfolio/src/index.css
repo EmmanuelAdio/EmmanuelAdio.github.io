@@ -50,14 +50,14 @@ code {
     monospace;
 }
 
-/* Page line css */
+                          /* Page line css */
 .PageLine{
   position: 'fixed';
   bottom : 0,
 }
 
 
-/* Introduction.css */
+                      /* Introduction.css */
 .page {
   min-height: 90vh;
   justify-content: flex-start; /* Keep title at the top */
@@ -97,7 +97,7 @@ h1 {
   width: 100%;
 }
 
-/* Project CSS */
+                    /* Project CSS */
 .project-card{
   width: auto;
   margin: auto;
@@ -114,10 +114,10 @@ h1 {
 }
 
 .card-description {
-  max-height: 4.5rem; /* Limit the description height */
+  min-height: 4.5rem; /* Limit the description height */
+  max-height: 4.5rem;
   overflow: hidden; /* Hide overflow text */
   text-overflow: ellipsis; /* Add ellipsis for overflow text */
-  white-space: nowrap; /* Prevent wrapping */
 }
 
 .card-body {
@@ -139,3 +139,16 @@ h1 {
 
 }
 
+                      /* Experience.css */
+.experience-card{
+  margin-top: 20px;
+  border: 1px solid white;
+  transition: all 0.3s ease;
+  padding : 20px
+}
+
+.experience-card:hover {
+  border-color: #007bff; /* Change border color on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+  transform: translateY(-5px); /* Slight move up effect */
+}
