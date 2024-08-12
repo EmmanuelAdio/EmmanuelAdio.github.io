@@ -18,7 +18,7 @@ export default function NavBar() {
 
       return (
         <>
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark " style={{textAlign : "center" }}>
           <div className="container-fluid">
             <a className="navbar-brand" href="#">EA</a>
 
@@ -35,8 +35,11 @@ export default function NavBar() {
               <span className="navbar-toggler-icon"></span>
             </button>
 
-            <div className="collapse navbar-collapse" id="navbarNav" style={{paddingLeft : "400px"}}>
+            <div className="collapse navbar-collapse" id="navbarNav" style={{paddingLeft : "0"}}>
               <ul className="navbar-nav mx-auto ">
+                <li className="nav-item active">
+                  <a className="nav-link" href="#">Home</a>
+                </li>
                 <li className="nav-item active">
                   <a className="nav-link" href="#">About</a>
                 </li>

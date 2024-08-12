@@ -8,16 +8,16 @@ interface Props {
   id: string;
   text: string;
 }
-export default function Introduction() {
+export default function About() {
   // This is where i update teh technologies that i am familier with
   const technologies = [
     "React", "Node.js", "Python", 
     "Java", "C/C++", "PHP"];
   return (
     <>
-    <NavBar></NavBar>
     <div className="page container-fluid p-4">
-      <h2>ABOUT</h2>
+      <h2>ABOUT ME</h2>
+      <h3>Meet Emmanuel!!</h3>
       <div className="row align-items-center">
         <div className="col-md-6">
 

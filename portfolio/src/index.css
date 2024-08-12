@@ -113,6 +113,11 @@ h1 {
   transform: translateY(-5px); /* Slight move up effect */
 }
 
+.card-image{
+  height: 150px;
+  width: 290;
+}
+
 .card-description {
   min-height: 4.5rem; /* Limit the description height */
   max-height: 4.5rem;
@@ -139,16 +144,79 @@ h1 {
 
 }
 
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: var(--bs-secondary);
+  padding: 32px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.popup-content button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
                       /* Experience.css */
 .experience-card{
   margin-top: 20px;
   border: 1px solid white;
   transition: all 0.3s ease;
-  padding : 20px
+  padding : 20px;
+  min-height : 200px;
 }
 
 .experience-card:hover {
   border-color: #007bff; /* Change border color on hover */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
   transform: translateY(-5px); /* Slight move up effect */
+  /* height: auto; We will need to fix this soon */
+}
+
+
+                      /* Contacts.css */
+.contactInfo {
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid white;
+  padding: 10px;
+}
+
+.formGroup{
+  margin-bottom: 15px,
+}
+
+.label{
+  display: block;
+  margin-bottom: 5px;
+  text-align: left,
+}
+
+.input{
+  width: 100%;
+  padding: 10px,
+}
+
+.textarea{
+  width: 100%;
+  padding: 10px;
+  min-height: 100px;
 }

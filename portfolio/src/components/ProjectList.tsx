@@ -1,6 +1,8 @@
-import React from "react";
+import React,{ useState }  from "react";
 import { Fragment } from "react";
+
 import ProjectCard from "./ProjectCard";
+import Popup from "./ProjectPopup";
 
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
@@ -20,21 +22,34 @@ interface Props {
 }
 
 function ProjectList({ projects }: Props) {
+  const [isPopupVisible, setIsPopupVisible] = useState(false);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
+  const handleCardClick = (project : Project) => {
+    setSelectedProject(project);
+    setIsPopupVisible(true);
+  };
+
+  const closePopup = () => {
+    setIsPopupVisible(false);
+    setSelectedProject(null);
+  };
+
   return (
     <>
       <Row xs={1} md={3} className="g-4">
         {projects.map((project, index) => (
           <Col className="project-card" key={index}>
             <ProjectCard
-              title={project.title}
-              description={project.description}
-              demo={project.demo}
-              repo={project.repo}
-              image={"/assets/PracticePic.jpg"}
+              project={project}
+              onClick={() => handleCardClick(project)}
             ></ProjectCard>
           </Col>
         ))}
       </Row>
+      {isPopupVisible && selectedProject && (
+                <Popup project={selectedProject} onClose={closePopup} />
+            )}
     </>
   );
 }

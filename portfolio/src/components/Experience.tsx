@@ -26,26 +26,40 @@ const experiences: Experience[] = [
   {
     id: "2",
     title: "Experience 2",
-    description: "This is the second project.This is the second project.This is the second project.This is the second project.This is the second project.This is the second project.This is the second project.This is the second project.This is the second project.This is the second project.This is the second project.This is the second project.This is the second project.This is the second project.This is the second project.This is the second project.This is the second project.This is the second project.This is the second project.",
+    description: "This is the second project.\
+    This is the second project.This is the second project.This is the second project.This is the second project.\
+    This is the second project.This is the second project.This is the second project.\
+    This is the second project.This is the second project.This is the second project.\
+    This is the second project.This is the second project.This is the second project.\
+    This is the second project.This is the second project.This is the second project.\
+    This is the second project.This is the second project.\
+    This is the second project.This is the second project.This is the second project.This is the second project.\
+    This is the second project.This is the second project.This is the second project.\
+    This is the second project.This is the second project.This is the second project.\
+    This is the second project.This is the second project.This is the second project.\
+    This is the second project.This is the second project.This is the second project.\
+    This is the second project.This is the second project.\
+    This is the second project.This is the second project.This is the second project.This is the second project.\
+    This is the second project.This is the second project.This is the second project.\
+    This is the second project.This is the second project.This is the second project.\
+    This is the second project.This is the second project.This is the second project.\
+    This is the second project.This is the second project.This is the second project.\
+    This is the second project.This is the second project.\
+    This is the second project.This is the second project.This is the second project.This is the second project.\
+    This is the second project.This is the second project.This is the second project.\
+    This is the second project.This is the second project.This is the second project.\
+    This is the second project.This is the second project.This is the second project.\
+    This is the second project.This is the second project.This is the second project.\
+    This is the second project.This is the second project.",
   },
   {
     id: "3",
     title: "Experience 3",
     description: "This is the third project.",
   },
-  {
-    id: "4",
-    title: "Experience 4",
-    description: "This is the third project.",
-  },
-  {
-    id: "5",
-    title: "Experience 5",
-    description: "This is the third project.",
-  },
+
   
-  
-  // Add more projects as needed
+  // Add more Experiences as needed
 ];
 export default function Experience() {
   return (

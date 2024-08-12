@@ -1,10 +1,12 @@
 import ProjectList from "./components/ProjectList";
 import PageLine from "./components/PageLine";
 
-import Introduction from "./components/Introduction";
+import About from "./components/About";
 import Projects from "./components/Projects";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
+import Home from "./components/Home";
+import NavBar from "./components/NavBar";
 
 import React from "react";
 
@@ -15,11 +17,16 @@ function App(){
     
     return (
     <>
-    <Introduction></Introduction>
+    <NavBar></NavBar>
+    <Home></Home>
+    <About></About>
     <Projects></Projects>
     <Experience></Experience>
     <Contact></Contact>
-    <PageLine></PageLine>
+
+    <footer>
+        <p>Made by Emmanuel Adio :)</p>
+    </footer>
     </>
     ); 
 }

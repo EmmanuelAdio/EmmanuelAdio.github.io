@@ -1,6 +1,5 @@
-import React from "react";
+import React,  { useState } from "react";
 import { Fragment } from "react";
-
 
 import ProjectList from "./ProjectList";
 import PageLine from "./PageLine";
@@ -43,6 +42,7 @@ const projects: Project[] = [
     description: "This is the third project.",
     demo: "https://example.com/demo2",
     repo: "https://example.com/repo2",
+    image : "./assets/PracticePic.jpg"
   },
   {
     id: "4",
@@ -66,8 +66,7 @@ const projects: Project[] = [
 
 
 export default function Projects(){
-
-  return (
+    return (
       <>
       <div className="page projects container-fluid p-4 position-relative">
       <h2>PROJECTS</h2>
