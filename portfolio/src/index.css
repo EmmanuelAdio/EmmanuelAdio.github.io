@@ -50,14 +50,31 @@ code {
     monospace;
 }
 
-                          /* Page line css */
-.PageLine{
-  position: 'fixed';
-  bottom : 0,
+/* Scrollbar track */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the entire scrollbar */
+  background-color: none; /* Background color of the scrollbar track */
+}
+
+/* Scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for the thumb */
+  border: 2px solid #f1f1f1; /* Space around the thumb */
+}
+
+/* Scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Darker color on hover */
+}
+
+/* Scrollbar corner (when both horizontal and vertical scrollbars are present) */
+::-webkit-scrollbar-corner {
+  background-color: #f1f1f1; /* Background color of the corner */
 }
 
 
-                      /* Introduction.css */
+
 .page {
   min-height: 90vh;
   justify-content: flex-start; /* Keep title at the top */
@@ -72,6 +89,42 @@ h1 {
   font-size: 2.5rem;
 }
 
+
+
+
+                          /* Page line css */
+.PageLine{
+  position: 'fixed';
+  bottom : 0,
+}
+
+                      /* Home.css */
+.textBox {
+  display: flex;
+  flex-direction: column; /* Align items in a column */
+  justify-content: flex-start; /* Keep title at the top */
+  align-items: center; /* Center content horizontally */
+  /* justify-content: center; 
+  align-items: center; */
+  padding: 20px 0;
+  text-align: center;
+  height: 100%;
+}
+
+.textBox h5 {
+  margin-bottom: 20px; /* Space between the title and the buttons */
+}
+
+.textBox .tech-container{
+  margin: 5px 0; /* Space between the buttons */
+  display: flex;
+  flex-wrap: wrap; /* Allow buttons to wrap to the next line */
+  justify-content: center; /* Center buttons horizontally */
+  gap: 10px; /* Space between the buttons */
+  width: 100%;
+}
+
+                      /* About.css */
 .textBox {
   display: flex;
   flex-direction: column; /* Align items in a column */
@@ -187,36 +240,95 @@ h1 {
 
 
                       /* Contacts.css */
-.contactInfo {
-  margin-bottom: 30px;
-  text-align: left;
+
+.contact-header {
+  margin-bottom: 2rem;
 }
 
-.form{
+.contacts {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 1px solid white;
-  padding: 10px;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem; /* Adjust space between the sections */
+  width: 100%; /* Ensures that the content spans across the page width */
+  max-width: 1200px; /* Optional: limits the maximum width */
 }
 
-.formGroup{
-  margin-bottom: 15px,
+.contact-sector {
+  flex: 1;
+  min-width: 300px; /* Ensures a minimum width for smaller screens */
 }
 
-.label{
-  display: block;
-  margin-bottom: 5px;
-  text-align: left,
+.contact-sector h3 {
+  text-align: center; /* Centers the headers within each section */
 }
 
-.input{
+.formGroup {
+  margin-bottom: 1rem;
+}
+
+.input,
+.textarea {
   width: 100%;
-  padding: 10px,
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-.textarea{
-  width: 100%;
-  padding: 10px;
-  min-height: 100px;
+.textarea {
+  height: 150px;
+  resize: none;
 }
+
+.btn {
+  margin-top: 1rem;
+}
+
+.contactInfo {
+  display: flex;
+  flex-wrap: wrap; /* Allow buttons to wrap to the next line */
+  justify-content: center; /* Center buttons horizontally */
+  gap: 10px; /* Space between the buttons */
+
+}
+
+.contactInfo img {
+  width: 50px; /* Set a fixed size for the social media icons */
+  height: 50px;
+  margin: 0.5rem;
+}
+
+.linkedin-link, .github-link {
+  margin: 0.5rem;
+}
+
+.linkedin-link img, .github-link img {
+  transition: transform 0.3s ease;
+}
+
+.linkedin-link img:hover, .github-link img:hover {
+  transform: scale(1.1); /* Slightly increase the size on hover */
+}
+
+@media (max-width: 768px) {
+  .contacts {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-sector {
+    max-width: 100%;
+  }
+
+  .contactInfo {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.linkedin-link, .github-link {
+    margin: 0.5rem;
+}
+}
+

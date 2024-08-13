@@ -11,7 +11,7 @@ interface Props {
 export default function Home() {
   return (
     <>
-    <div className="page container-fluid p-4">
+    <div className="page home container-fluid p-4">
       <div className="row align-items-center">
         <div className="col-md-6">
 

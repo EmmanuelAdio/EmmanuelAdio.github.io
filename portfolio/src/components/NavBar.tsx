@@ -25,7 +25,7 @@ export default function NavBar() {
             {/* This is the toggles nav bar button then the screen shrinks */}
             <button
               className="navbar-toggler"
-              type="button"
+              type="button" 
               data-bs-toggle="collapse"
               data-bs-target="#navbarNav"
               aria-controls="navbarNav"
@@ -55,15 +55,15 @@ export default function NavBar() {
               </ul>
 
               {/* This will be changed to social midea link images!! */}
-              <ul className="navbar-nav ms-auto">
+              <ul className="navbar-nav">
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    <span className="glyphicon glyphicon-user"></span> Sign Up
+                  <a className="nav-link github-link-nav" href="https://github.com/EmmanuelAdio" target="_blank" rel="noopener noreferrer">
+                  <img src="./assets/github-logo2.png" alt="GitHub"></img>
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    <span className="glyphicon glyphicon-log-in"></span> Login
+                  <a className="nav-link linkedin-link-nav" href="https://www.linkedin.com/in/emmanuel-adio-272097216/" target="_blank" rel="noopener noreferrer">
+                  <img src="./assets/linkedin-logo.png" alt="LinkedIn"></img>
                   </a>
                 </li>
               </ul>

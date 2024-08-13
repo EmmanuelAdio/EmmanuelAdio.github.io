@@ -30,59 +30,66 @@ export default function Projects(){
   
   return (
     <>
-     <div className="page contacts container-fluid p-4">
-      <h2>CONTACT</h2>
+      <div className="page container-fluid p-4">
+        <h2 className="contact-header text-center">CONTACT</h2>
+        <div className="contacts container-fluid p-4">
+          <div className="contact-sector">
+            <h3>EMAIL ME</h3>
+            <form className="form" onSubmit={handleSubmit}>
+              <div className="formGroup">
+                <label className="label" htmlFor="name">Name:</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="input"
+                  required
+                />
+              </div>
+              <div className="formGroup">
+                <label className="label" htmlFor="email">Email:</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="input"
+                  required
+                />
+              </div>
+              <div className="formGroup">
+                <label className="label" htmlFor="message">Message:</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  className="textarea"
+                  required
+                />
+              </div>
+              <button type="submit" className="btn btn-primary">Send Message</button>
+            </form>
+          </div>
 
-      <form className="form" onSubmit={handleSubmit}>
-        <div className="formGroup">
-          <label className="label" htmlFor="name">Name:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            className="input"
-            required
-          />
-        </div>
-        <div className="formGroup">
-          <label className="label" htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            className="input"
-            required
-          />
-        </div>
-        <div className="formGroup">
-          <label className="label" htmlFor="message">Message:</label>
-          <textarea
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            className="textarea"
-            required
-          />
-        </div>
-        <button type="submit" className="btn btn-primary">Send Message</button>
-      </form>
+          <div className="contact-sector">
+            <h3>SOCIAL MEDIA</h3>
+            <div className="contactInfo">
+              <a className="nav-link linkedin-link" href="https://www.linkedin.com/in/emmanuel-adio-272097216/" target="_blank" rel="noopener noreferrer">
+                <img src="./assets/linkedin-logo.png" alt="LinkedIn" />
+              </a>
 
-      <div className="contactInfo">
-        {/* <p>Email: <a href="mailto:emmanueladio065@gmail.com">emmanueladio065@gmail.com</a></p> */}
-        {/* <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p> */}
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/emmanuel-adio-272097216/" target="_blank" rel="noopener noreferrer">https://www.linkedin.com/in/emmanuel-adio-272097216/</a></p>
-        <p>GitHub: <a href="https://github.com/EmmanuelAdio" target="_blank" rel="noopener noreferrer">https://github.com/EmmanuelAdio</a></p>
+              <a className="nav-link github-link" href="https://github.com/EmmanuelAdio" target="_blank" rel="noopener noreferrer">
+                <img src="./assets/github-logo2.png" alt="GitHub" />
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
-
-      
-      
-    </div>
-    <PageLine></PageLine>
+      <PageLine />
     </>
   );
 };

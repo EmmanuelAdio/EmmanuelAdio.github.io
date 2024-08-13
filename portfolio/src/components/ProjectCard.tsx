@@ -24,14 +24,14 @@ function ProjectCard({project, onClick} : Props){
     }
     return (
         <>
-        <Card onClick={() => onClick(project)} style={{ width: '18rem' , height: '100%', cursor : 'pointer' }}>
+        <Card style={{ width: '18rem' , height: '100%', cursor : 'pointer' }}>
 
-       <Card.Img className = "card-image" variant="top" src={project.image} alt={project.title}></Card.Img>
+       <Card.Img onClick={() => onClick(project)} className = "card-image" variant="top" src={project.image} alt={project.title}></Card.Img>
 
         
         <Card.Body className = "card-body">
-            <Card.Title>{project.title}</Card.Title>
-            <Card.Text className = "card-description">{project.description}</Card.Text>
+            <Card.Title onClick={() => onClick(project)}>{project.title}</Card.Title>
+            <Card.Text onClick={() => onClick(project)} className = "card-description">{project.description}</Card.Text>
 
             <div className = "d-flex justify-content-between">
                 <a href={project.demo} className="me-2"><button className="btn btn-primary" >Demo</button></a>

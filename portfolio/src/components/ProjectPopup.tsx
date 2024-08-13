@@ -26,7 +26,7 @@ function Popup({ project, onClose } : Prop) {
     <>
     <div className="popup-overlay" onClick={onClose}>
       <div className="popup-content">
-        <button onClick={onClose}>Close</button>
+        <button type="button" className="btn-close" aria-label="Close" onClick={onClose}></button>
         <h2>{project.title}</h2>
         <p>{project.description}</p>
         {/* Add more project details as needed */}
