@@ -34,46 +34,6 @@
   }
 }
 
-.page {
-  min-height: 90vh;
-  justify-content: flex-start; /* Keep title at the top */
-  text-align: center;
-  z-index: 2;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.page h2{
-  margin-bottom: 20px;
-}
-
-.navbar{
-  animation: fadeIn 2s ease-in-out;
-}
-
-/* Page line css */
-.PageLine{
-  position: 'fixed';
-  bottom : 0,
-}
-
-
-
-body {
-  margin: 0;
-  background-color: var(--background);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-
 /* Scrollbar track */
 ::-webkit-scrollbar {
   width: 12px; /* Width of the entire scrollbar */
@@ -97,11 +57,12 @@ code {
   background-color: #f1f1f1; /* Background color of the corner */
 }
 
+
+
+/* General styles */
 html {
   scroll-behavior: smooth;
 }
-
-/* General styles */
 
 body {
   margin: 0;
@@ -112,6 +73,37 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* page Sections */
+.page {
+  position: relative;
+  min-height: 100vh;
+  text-align: center;
+  z-index: 2;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: var(--background);
+}
+
+.page h2{
+  margin-bottom: 20px;
+}
+
+.navbar{
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Page line css */
+.PageLine{
+  position: 'fixed';
+  bottom : 0,
+}
+
+
 
 /* Home Section */
 .home-section {
@@ -147,15 +139,7 @@ body {
   font-size: 1.25rem;
 }
 
-/* page Sections */
-.page {
-  position: relative;
-  min-height: 100vh;
-  text-align: center;
-  z-index: 2;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  background-color: var(--background); /* Use background color variables */
-}
+
 
 /* Fade-in animation */
 @keyframes fadeIn {
@@ -193,7 +177,20 @@ body {
   width: 100%;
 }
 
-                    /* Project CSS */
+.highlight {
+  font-weight: bold;
+  color: var(--accent);
+}
+
+.carousel-image {
+  width: 100%;
+  height: 400px; /* Adjust the height as needed */
+  object-fit: contain; /* Ensures the entire image fits within the container */
+  object-position: center; /* Centers the image if there is any empty space */
+  background-color: var(--background); /* Optional: set a background color for letterboxed areas */
+}
+
+/* Project CSS */
 .project-card{
   width: auto;
   margin: auto;
