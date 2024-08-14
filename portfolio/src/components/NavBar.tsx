@@ -18,7 +18,7 @@ export default function NavBar() {
 
       return (
         <>
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark " style={{textAlign : "center" }}>
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark " style={{textAlign : "center", backgroundColor : "black"}}>
           <div className="container-fluid">
             <a className="navbar-brand" href="#">EA</a>
 
@@ -38,19 +38,19 @@ export default function NavBar() {
             <div className="collapse navbar-collapse" id="navbarNav" style={{paddingLeft : "0"}}>
               <ul className="navbar-nav mx-auto ">
                 <li className="nav-item active">
-                  <a className="nav-link" href="#">Home</a>
+                  <a className="nav-link" href="#home-section">Home</a>
                 </li>
                 <li className="nav-item active">
-                  <a className="nav-link" href="#">About</a>
+                  <a className="nav-link" href="#about-section">About</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">Projects</a>
+                  <a className="nav-link" href="#project-section">Projects</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">Experience</a>
+                  <a className="nav-link" href="#experience-section">Experience</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">Contact</a>
+                  <a className="nav-link" href="#contact-section">Contact</a>
                 </li>
               </ul>
 

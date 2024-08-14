@@ -56,9 +56,7 @@
   bottom : 0,
 }
 
-html {
-  scroll-behavior: smooth;
-}
+
 
 body {
   margin: 0;
@@ -99,6 +97,10 @@ code {
   background-color: #f1f1f1; /* Background color of the corner */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* General styles */
 
 body {
@@ -130,21 +132,6 @@ body {
   animation: fadeIn 2s ease-in-out;
 }
 
-.home-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Optional overlay for the background image */
-  z-index: -1;
-}
-
-.home-section.scroll-cover {
-  transform: translateY(-25vh) scale(0.3); /* Move the home section up and scale down */
-}
-
 .textBox.Home {
   color: white;
   text-align: center;
@@ -170,11 +157,6 @@ body {
   background-color: var(--background); /* Use background color variables */
 }
 
-/* Overlap effect when scrolling */
-.page:not(.home-section) {
-  z-index: 3;
-}
-
 /* Fade-in animation */
 @keyframes fadeIn {
   from {
@@ -193,8 +175,6 @@ body {
   flex-direction: column; /* Align items in a column */
   justify-content: flex-start; /* Keep title at the top */
   align-items: center; /* Center content horizontally */
-  /* justify-content: center; 
-  align-items: center; */
   padding: 20px 0;
   text-align: center;
   height: 100%;

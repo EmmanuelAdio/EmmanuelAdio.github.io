@@ -9,36 +9,30 @@ import React, { useEffect, useRef, useState } from "react";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function App(){
-    const homeRef = useRef<HTMLDivElement | null>(null);
-
-    useEffect(() => {
-        const handleScroll = () => {
-        if (homeRef.current) {
-            const scrollPosition = window.scrollY;
-            homeRef.current.style.transform = `translateY(${scrollPosition * 0.2}px) scale(${1 - scrollPosition * 0.0005})`;
-        }
-        };
-
-        window.addEventListener("scroll", handleScroll);
-
-        return () => {
-        window.removeEventListener("scroll", handleScroll);
-        };
-    }, []);
-    
-    
+function App(){    
     return (
     <>
     <NavBar></NavBar>
-    <section ref={homeRef} className="home-section">
+    <section id="home-section" className="home-section">
         <Home></Home>
     </section>
     
-    <About></About>
-    <Projects></Projects>
-    <Experience></Experience>
-    <Contact></Contact>
+    <section id="about-section">
+        <About></About>
+    </section>
+    
+    <section id="project-section">
+        <Projects></Projects>
+    </section>
+    
+    <section id="experience-section">
+        <Experience></Experience>
+    </section>
+    
+    <section id="contact-section">
+        <Contact></Contact>
+    </section>
+    
 
     <footer>
         <p>Made by Emmanuel Adio :)</p>
