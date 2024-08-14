@@ -34,6 +34,31 @@
   }
 }
 
+.page {
+  min-height: 90vh;
+  justify-content: flex-start; /* Keep title at the top */
+  text-align: center;
+  z-index: 2;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.page h2{
+  margin-bottom: 20px;
+}
+
+.navbar{
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Page line css */
+.PageLine{
+  position: 'fixed';
+  bottom : 0,
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
@@ -49,6 +74,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
 
 /* Scrollbar track */
 ::-webkit-scrollbar {
@@ -73,58 +99,95 @@ code {
   background-color: #f1f1f1; /* Background color of the corner */
 }
 
+/* General styles */
 
-
-.page {
-  min-height: 90vh;
-  justify-content: flex-start; /* Keep title at the top */
-  text-align: center;
+body {
+  margin: 0;
+  background-color: var(--background);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.page h2{
-  margin-bottom: 20px;
-}
-
-h1 {
-  font-size: 2.5rem;
-}
-
-
-
-
-                          /* Page line css */
-.PageLine{
-  position: 'fixed';
-  bottom : 0,
-}
-
-                      /* Home.css */
-.textBox {
+/* Home Section */
+.home-section {
+  position: relative;
+  height: 100vh;
   display: flex;
-  flex-direction: column; /* Align items in a column */
-  justify-content: flex-start; /* Keep title at the top */
-  align-items: center; /* Center content horizontally */
-  /* justify-content: center; 
-  align-items: center; */
-  padding: 20px 0;
-  text-align: center;
-  height: 100%;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  z-index: 1;
+  overflow: hidden;
+  background-image: url('./assets/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Make the background image fixed for a parallax effect */
+  transition: transform 0.5s ease; /* Smooth transform when scrolling */
+  will-change: transform;
+  animation: fadeIn 2s ease-in-out;
 }
 
-.textBox h5 {
-  margin-bottom: 20px; /* Space between the title and the buttons */
-}
-
-.textBox .tech-container{
-  margin: 5px 0; /* Space between the buttons */
-  display: flex;
-  flex-wrap: wrap; /* Allow buttons to wrap to the next line */
-  justify-content: center; /* Center buttons horizontally */
-  gap: 10px; /* Space between the buttons */
+.home-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Optional overlay for the background image */
+  z-index: -1;
 }
 
-                      /* About.css */
+.home-section.scroll-cover {
+  transform: translateY(-25vh) scale(0.3); /* Move the home section up and scale down */
+}
+
+.textBox.Home {
+  color: white;
+  text-align: center;
+  z-index: 2;
+}
+
+.textBox h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.textBox p {
+  font-size: 1.25rem;
+}
+
+/* page Sections */
+.page {
+  position: relative;
+  min-height: 100vh;
+  text-align: center;
+  z-index: 2;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: var(--background); /* Use background color variables */
+}
+
+/* Overlap effect when scrolling */
+.page:not(.home-section) {
+  z-index: 3;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+ /* About.css */
 .textBox {
   display: flex;
   flex-direction: column; /* Align items in a column */

@@ -1,23 +1,24 @@
 import React from "react";
-import { Fragment } from "react";
-
+import TypingEffect from "./TypingEffect"; 
 import PageLine from "./PageLine";
-import NavBar from "./NavBar";
+import NavBar from "./NavBar"; // Assuming NavBar is used on this page
 
-interface Props {
-  id: string;
-  text: string;
-}
-export default function Home() {
+export default function Home(){
   return (
     <>
-    <div className="page home container-fluid p-4">
-      <div className="textBox Introduction">
-        <h2 className="textBox mb-4">HELLO, MY NAME IS EMMANUEL ADIO</h2>
-        <p>*This is where my short introduction will go*</p>
+      <div className="home container-fluid p-4">
+        <div className="textBox Home">
+          <h2>
+            <TypingEffect
+              texts={["HELLO, MY NAME IS EMMANUEL ADIO", "Welcome to My Portfolio"]}
+              typingSpeed={100}
+              deletingSpeed={50}
+              loop
+            />
+          </h2>
+        </div>
       </div>
-    </div>
-    <PageLine></PageLine>
+      <PageLine />
     </>
   );
 }
