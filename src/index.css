@@ -229,13 +229,6 @@ code {
   position: relative;
 }
 
-.all-projects-btn {
-  position: absolute;
-  bottom: 0; /* Align to the bottom of the container */
-  left: 50%;
-  transform: translateX(-50%);
-
-}
 
 .popup-overlay {
   position: fixed;
@@ -262,7 +255,7 @@ code {
   right: 8px;
 }
 
-                      /* Experience.css */
+/* Experience.css */
 .experience-card{
   margin-top: 20px;
   border: 1px solid white;
@@ -279,7 +272,7 @@ code {
 }
 
 
-                      /* Contacts.css */
+/* Contacts.css */
 
 .contact-header {
   margin-bottom: 2rem;

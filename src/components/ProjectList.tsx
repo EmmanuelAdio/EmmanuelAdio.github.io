@@ -1,4 +1,4 @@
-import React,{ useState }  from "react";
+import React,{ ReactElement, useState }  from "react";
 import { Fragment } from "react";
 
 import ProjectCard from "./ProjectCard";
@@ -11,10 +11,12 @@ import Row from "react-bootstrap/Row";
 interface Project {
   id: string;
   title: string;
-  description: string;
+  description: ReactElement;
   demo?: string;
   repo: string;
-  image? : string;
+  image?: string;
+  tech? : string[];
+  images? :string[]
 }
 
 interface Props {
