@@ -12,7 +12,7 @@ export default function About() {
   // Technologies you're familiar with
   const technologies: string[] = [
     "React",
-    "Node.js",
+    "React.js",
     "Python",
     "Java",
     "PHP",

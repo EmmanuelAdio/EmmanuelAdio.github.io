@@ -27,27 +27,34 @@ function Popup({ project, onClose } : Prop) {
 
   return (
     <>
-    <div className="popup-overlay" onClick={onClose}>
+    <div className="popup-overlay">
       <div className="popup-content">
         <button type="button" className="btn-close" aria-label="Close" onClick={onClose}></button>
         <h2>{project.title}</h2>
 
         {project.images && (
-        <div className="col-md-6">
+        <div className="col-md-6 carousel-center">
           <ImageCarousel images={project.images}></ImageCarousel>
         </div>)}
-        <p>{project.description}</p>
+
+        {project.description}
         {/* Add more project details as needed */}
-        {project.demo && (
-          <a href={project.demo} className="me-2">
-            <button className="btn btn-primary">Demo</button>
-          </a>
-        )}
-        {project.repo && (
-          <a href={project.repo}>
-            <button className="btn btn-secondary">Repository</button>
-          </a>
-        )}
+
+        <div className='popUp-btn'>
+          {project.demo && (
+            <a href={project.demo} className="me-2">
+              <button className="btn btn-primary">Demo</button>
+            </a>
+          )}
+          {project.repo && (
+            <a href={project.repo}>
+              <button className="btn btn-secondary">Repository</button>
+            </a>
+          )}
+        
+        </div>
+        
+       
        </div>
     </div>
     </>

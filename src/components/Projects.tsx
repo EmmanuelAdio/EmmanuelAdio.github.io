@@ -62,6 +62,7 @@ const projects: Project[] = [
       </>
     ),
     repo: "https://github.com/EmmanuelAdio/ANNCoursework",
+    image : "./assets/ANN-SS.png"
   },
   {
     id: "3",

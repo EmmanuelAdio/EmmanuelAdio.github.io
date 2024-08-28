@@ -187,7 +187,6 @@ code {
   height: 400px; /* Adjust the height as needed */
   object-fit: contain; /* Ensures the entire image fits within the container */
   object-position: center; /* Centers the image if there is any empty space */
-  background-color: var(--background); /* Optional: set a background color for letterboxed areas */
 }
 
 /* Project CSS */
@@ -230,6 +229,12 @@ code {
 }
 
 
+.carousel-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .popup-overlay {
   position: fixed;
   top: 0;
@@ -243,13 +248,20 @@ code {
 }
 
 .popup-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the carousel horizontally */
+  justify-content: center; /* Center the content vertically */
   background: var(--bs-secondary);
   padding: 32px;
   border-radius: 8px;
   position: relative;
+  max-width: 80%;
+  max-height: 80%;
+  overflow-y: auto; /* Optional: handles overflow content */
 }
 
-.popup-content button {
+.popup-content .btn-close {
   position: absolute;
   top: 8px;
   right: 8px;

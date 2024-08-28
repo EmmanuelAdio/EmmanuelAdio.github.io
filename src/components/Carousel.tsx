@@ -5,7 +5,6 @@ interface CarouselProp{
 }
 
 export default function ImageCarousel(prop : CarouselProp) {
-    let text = ""
     return (
         <Carousel>
             {prop.images.map((image, index) => (

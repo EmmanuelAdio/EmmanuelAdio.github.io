@@ -27,13 +27,13 @@ function ProjectCard({ project, onClick }: Props) {
     <>
       <Card style={{ width: "18rem", height: "100%", cursor: "pointer" }}>
         <Card.Img
-          onClick={() => onClick(project)}
-          className="card-image"
-          variant="top"
-          src={project.image}
-          alt={project.title}
+        onClick={() => onClick(project)}
+        className="card-image"
+        variant="top"
+        src={project.image}
+        alt={project.title}
         ></Card.Img>
-
+        
         <Card.Body className="card-body">
           <Card.Title onClick={() => onClick(project)}>
             {project.title}
