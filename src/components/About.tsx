@@ -12,14 +12,10 @@ export default function About() {
   // Technologies you're familiar with
   const technologies: string[] = [
     "React",
-    "React.js",
-    "Python",
-    "Java",
-    "PHP",
-    "Kotlin",
-    "VSCode",
-    "Github/Git"
-  ];
+    "Java", "Python", "HTML/CSS", "Javascript","PHP", "C/C++", "Haskell", "Pascall", "Kotlin",
+    "Github", "VS Code", "Eclipse", "Android Studio", "IntelliJ IDEA", "JDK", "Excel",
+    "NumPy", "Matplotlib"
+    ];
 
   // pictures will be displayes here
   const images: string[] = [

@@ -41,6 +41,12 @@ const projects: Project[] = [
       </>
     ),
     repo: "https://github.com/EmmanuelAdio/BetterYesterday",
+    image : "./assets/BetterYesterday/BY-1.png",
+    images : ["./assets/BetterYesterday/BY-2.png",
+              "./assets/BetterYesterday/BY-3.png",
+              "./assets/BetterYesterday/BY-4.png"
+    ],
+    tech : ["Content Provider", "Room Database", "NavController", "Android Sharesheet"]
   },
   {
     id: "2",
@@ -53,16 +59,20 @@ const projects: Project[] = [
         <br />
         <br />
         <ul>
-          <li>Implemented multiple distinct screens using NavHost and NavController.</li>
-          <li>Utilized local storage with Preference Datastores and Room database</li>
-          <li>Integrated calendar app using implicit intents</li>
-          <li>Managed lifecycle events for seamless user experience.</li>
-          <li>Handled permissions responsibly for notifications and data sharing.</li>
+          <li> <span className="highlight">Data Preprocessing:</span> Implemented data cleaning, splitting, randomizing, and standardizing.</li>
+          <li> <span className="highlight">Training Enhancements:</span> Integrated Momentum, Annealing, Bold Driver, Weight Decay, and Batch Processing
+to optimize the backpropagation algorithm.</li>
+          <li> <span className="highlight">Evaluation:</span> Evaluation: Achieved a Mean Squared Error (MSE) of 0.0015618, significantly outperforming traditional linear
+          regression models</li>
+          <li> <span className="highlight"> Outcome:</span> Successfully trained a highly accurate neural network model for flood index prediction, demonstrating
+          significant improvements over baseline models.</li>
         </ul>
       </>
     ),
     repo: "https://github.com/EmmanuelAdio/ANNCoursework",
-    image : "./assets/ANN-SS.png"
+    image : "./assets/ANN-SS.png",
+    images : ["./assets/ANN-Results.png"],
+    tech : ["IntelliJ IDEA", "JDK", "Excel (for data processing)"]
   },
   {
     id: "3",
@@ -74,15 +84,19 @@ const projects: Project[] = [
         <br />
         <br />
         <ul>
-          <li>Implemented multiple distinct screens using NavHost and NavController.</li>
-          <li>Utilized local storage with Preference Datastores and Room database</li>
-          <li>Integrated calendar app using implicit intents</li>
-          <li>Managed lifecycle events for seamless user experience.</li>
-          <li>Handled permissions responsibly for notifications and data sharing.</li>
+          <li>Implemented role-based access control, distinguishing functionalities between ’Admin’ and ’Customer’ roles.</li>
+          <li>Enabled admins to manage book inventory while providing users with functionalities to handle shopping basket
+          operations.</li>
+          <li>Incorporated comprehensive error handling to enhance user experience, handling scenarios like out-of-stock items
+          and insufficient credit.</li>
+          <li>Applied Object-Oriented Programming principles, demonstrating a keen eye for detail and stringent requirements analysis.</li>
         </ul>
       </>
     ),
     repo: "https://github.com/EmmanuelAdio/OOP_Bookshop_Prog",
+    image : "./assets/BOOK-Open.png",
+    images : ["./assets/Book-Customer.png"
+    ]
   },
   {
     id: "4",
@@ -94,15 +108,23 @@ const projects: Project[] = [
         <br />
         <br />
         <ul>
-          <li>Implemented multiple distinct screens using NavHost and NavController.</li>
-          <li>Utilized local storage with Preference Datastores and Room database</li>
-          <li>Integrated calendar app using implicit intents</li>
-          <li>Managed lifecycle events for seamless user experience.</li>
-          <li>Handled permissions responsibly for notifications and data sharing.</li>
+          <li>Implemented error handling and synchronization between Arduino and the host program to ensure smooth
+          operations</li>
+          <li>Enhanced the project’s functionality with features like custom characters, free SRAM display, device filtering, data
+          persistence, and long string scrolling.</li>
+          <li>Leveraged my knowledge in other programming languages to quickly adapt to C/C++, ensuring a smooth
+          development process.</li>
+          <li>Gained valuable experience in low-level programming, memory management, and optimization for
+          resource-constrained environments.</li>
         </ul>
       </>
     ),
     repo: "https://github.com/EmmanuelAdio/Embedded_Prog",
+    image : "./assets/SM-1.png",
+    images : ["./assets/SM-2.png",
+              "./assets/SM-3.png",
+              "./assets/SM-4.png"
+    ]
   },
   {
     id: "5",
@@ -115,15 +137,21 @@ const projects: Project[] = [
         <br />
         <br />
         <ul>
-          <li>Implemented multiple distinct screens using NavHost and NavController.</li>
-          <li>Utilized local storage with Preference Datastores and Room database</li>
-          <li>Integrated calendar app using implicit intents</li>
-          <li>Managed lifecycle events for seamless user experience.</li>
-          <li>Handled permissions responsibly for notifications and data sharing.</li>
+          <li>Implemented different levels of AI complexity: Player vs Player, Random AI, Smart AI, and Minimax AI.</li>
+          <li>Explored how AI complexity impacts game difficulty and player enjoyment.</li>
+          <li>Conducted comprehensive testing and evaluation of AI performance.</li>
+          <li><span className="highlight">AI Techniques:</span>Random move generation, strategic move algorithms, Minimax algorithm</li>
+          <li><span className="highlight">Project Management:</span> Planned, developed, and documented the project from inception to evaluation.</li>
+          <li><span className="highlight">Outcome: </span>Successfully demonstrated the workings of AI in games, showing the progression of AI complexity and
+          its effects on gameplay</li>
         </ul>
       </>
     ),
     repo: "https://github.com/EmmanuelAdio/TicTacToe_EPQ",
+    image : "./assets/TicTacToe-Open.png",
+    images : ["./assets/TicTacToe-Open.png",
+               "./assets/TicTacToe-Play.png"    
+    ]
   },
 
   // Add more projects as needed

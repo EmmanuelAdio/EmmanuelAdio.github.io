@@ -33,12 +33,27 @@ function Popup({ project, onClose } : Prop) {
         <h2>{project.title}</h2>
 
         {project.images && (
-        <div className="col-md-6 carousel-center">
+        <div className="col-md-6 carousel-center" style={{marginTop: "100px"}}>
           <ImageCarousel images={project.images}></ImageCarousel>
         </div>)}
 
         {project.description}
         {/* Add more project details as needed */}
+        <br />
+        
+        {project.tech &&
+         <div className="textBox">
+            <p><span className='highlight'> Extra Technologies used: </span></p>
+            <div className="tech-container">
+            
+            {project.tech.map((tech, index) => (
+              <button key={index} className="btn btn-primary">
+                {tech}
+              </button>
+            ))}
+          </div>
+        </div>}
+        
 
         <div className='popUp-btn'>
           {project.demo && (
