@@ -60,13 +60,15 @@ interface Experience {
 
                     <div className='textBox'>
                         {/* Button to toggle the card content */}
-                        <a onClick={handleToggle}>
-                            <button className="btn btn-secondary">{isExpanded ? 'Hide Details' : 'Show Details'}</button>
-                        </a>
+                        
                         {exp.url && 
                         (<a href={exp.url} className="">
                             <button className="btn btn-secondary">visit</button>
                         </a>)}
+
+                        <a onClick={handleToggle}>
+                            <button className="btn btn-secondary">{isExpanded ? 'Hide Details' : 'Show Details'}</button>
+                        </a>
                     </div>
                     
                     

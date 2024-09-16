@@ -34,9 +34,20 @@ function App(){
     </section>
     
 
-    <footer>
-        <p>Made by Emmanuel Adio :)</p>
+    <footer className="footer">
+    <div className="footer-content">
+        <p>Made with ❤️ by Emmanuel Adio</p>
+        <div className="social-links">
+        <a href="https://github.com/EmmanuelAdio" target="_blank" rel="noopener noreferrer">
+            <img src="./assets/github-logo2.png" alt="GitHub" />
+        </a>
+        <a href="https://www.linkedin.com/in/emmanuel-adio-272097216/" target="_blank" rel="noopener noreferrer">
+            <img src="./assets/linkedin-logo.png" alt="LinkedIn" />
+        </a>
+        </div>
+    </div>
     </footer>
+
     </>
     ); 
 }

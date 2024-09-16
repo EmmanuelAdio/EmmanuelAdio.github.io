@@ -20,8 +20,29 @@ export default function Projects(){
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Here you would typically handle form submission,
-    // like sending the data to your backend or an email service.
+
+    fetch('https://formspree.io/f/xkgwaeqp', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+      }),
+    })
+    .then((response) => {
+      if (response.ok) {
+        alert('Thank you for reaching out! I will get back to you soon.');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        alert('Oops! Something went wrong. Please try again.');
+      }
+    })
+    .catch(() => alert('Something went wrong.'));
+
     console.log('Form submitted:', formData);
     alert('Thank you for reaching out! I will get back to you soon.');
   };
