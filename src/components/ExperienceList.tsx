@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import { Fragment } from "react";
 import ProjectCard from "./ProjectCard";
 
@@ -9,7 +9,12 @@ import ExperienceCard from "./ExperienceCard";
 interface Experience {
   id: string;
   title: string;
-  description: string;
+  description : ReactElement;
+  skills? : string[]
+  company : string;
+  startDate : string;
+  endDate : String;
+  url? : string;
 }
 
 interface Props {
@@ -20,12 +25,10 @@ function ExperienceList({ experiences }: Props) {
   return (
     <>
       <Row xs={1} md={1} className="g-4">
-        {experiences.map((experiences, index) => (
+        {experiences.map((experience, index) => (
           <Col className="experience-card" key={index}>
             <ExperienceCard
-              id={experiences.id}
-              title={experiences.title}
-              description={experiences.description}
+              exp = {experience}
             ></ExperienceCard>
           </Col>
         ))}

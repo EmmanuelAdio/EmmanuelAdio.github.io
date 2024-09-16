@@ -302,6 +302,15 @@ code {
   /* height: auto; We will need to fix this soon */
 }
 
+.experience-card-text {
+  transition: max-height 0.3s ease-out;
+  overflow: hidden;
+  max-height: 0;
+}
+
+.experienece-card-text.show {
+  max-height: 1000px; /* adjust this value based on your content */
+}
 
 /* Contacts.css */
 

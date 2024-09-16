@@ -1,7 +1,6 @@
 import React, { ReactElement } from "react";
 
 import Card from "react-bootstrap/Card";
-import Button from "./Button";
 
 interface Project {
     id: string;
