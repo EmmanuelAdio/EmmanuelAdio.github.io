@@ -47,5 +47,6 @@
   "devDependencies": {
     "gh-pages": "^6.1.1"
   },
-  "homepage": "https://EmmanuelAdio.github.io/EmmanuelAdio.github.io"
+  "homepage": "https://EmmanuelAdio.github.io",
+  "deploy": "gh-pages -d build"
 }
