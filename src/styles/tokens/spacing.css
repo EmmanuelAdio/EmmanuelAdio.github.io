@@ -1,0 +1,38 @@
+/* ============================================================
+   SPACING — Emmanuel Adio Portfolio
+   ------------------------------------------------------------
+   4px base grid. Use --space-* for padding/margin/gap and the
+   layout tokens for page rhythm and section spacing.
+   ============================================================ */
+
+:root {
+  /* --- BASE SCALE (4px grid) --- */
+  --space-0:   0;
+  --space-1:   0.25rem;  /*  4px */
+  --space-2:   0.5rem;   /*  8px */
+  --space-3:   0.75rem;  /* 12px */
+  --space-4:   1rem;     /* 16px */
+  --space-5:   1.5rem;   /* 24px */
+  --space-6:   2rem;     /* 32px */
+  --space-7:   2.5rem;   /* 40px */
+  --space-8:   3rem;     /* 48px */
+  --space-9:   4rem;     /* 64px */
+  --space-10:  6rem;     /* 96px */
+  --space-11:  8rem;     /* 128px */
+
+  /* --- SEMANTIC SPACING --- */
+  --gap-inline:    var(--space-2);  /* between inline chips/icons */
+  --gap-stack:     var(--space-4);  /* between stacked elements */
+  --gap-group:     var(--space-6);  /* between groups */
+  --pad-card:      var(--space-6);  /* card interior padding */
+  --pad-control:   var(--space-3);  /* button/input padding-y base */
+  --section-y:     var(--space-11); /* vertical section rhythm */
+
+  /* --- LAYOUT --- */
+  --container-max: 1200px;  /* content column cap (site uses ~1200) */
+  --container-pad: var(--space-6);
+  --navbar-h:      64px;
+
+  /* --- GRID --- */
+  --grid-gutter:   var(--space-5);
+}

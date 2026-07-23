@@ -1,0 +1,88 @@
+/* ============================================================
+   TYPOGRAPHY — Emmanuel Adio Portfolio
+   ------------------------------------------------------------
+   Families, the type scale, weights, line-heights and tracking.
+   Headings: Space Grotesk. Body: IBM Plex Sans. Code/labels:
+   IBM Plex Mono. Section eyebrows are mono + uppercase + tracked.
+   ============================================================ */
+
+:root {
+  /* --- FAMILIES --- */
+  --font-display: 'Space Grotesk', 'Segoe UI', system-ui, sans-serif;
+  --font-sans:    'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+  --font-mono:    'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+
+  /* semantic aliases */
+  --font-heading: var(--font-display);
+  --font-body:    var(--font-sans);
+  --font-code:    var(--font-mono);
+
+  /* --- WEIGHTS --- */
+  --weight-regular:  400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+
+  /* --- TYPE SCALE (1.250 major-third-ish, tuned) --- */
+  --text-display:  clamp(3rem, 6vw, 5rem);     /* hero name, 48–80px */
+  --text-h1:       clamp(2.25rem, 4vw, 3.25rem);/* 36–52px */
+  --text-h2:       clamp(1.75rem, 3vw, 2.25rem);/* 28–36px */
+  --text-h3:       1.5rem;     /* 24px */
+  --text-h4:       1.25rem;    /* 20px */
+  --text-lg:       1.125rem;   /* 18px lead */
+  --text-base:     1rem;       /* 16px body */
+  --text-sm:       0.875rem;   /* 14px */
+  --text-xs:       0.75rem;    /* 12px label */
+  --text-eyebrow:  0.8125rem;  /* 13px mono eyebrow */
+
+  /* --- LINE HEIGHTS --- */
+  --leading-tight:   1.05;   /* display */
+  --leading-snug:    1.2;    /* headings */
+  --leading-normal:  1.5;    /* UI */
+  --leading-relaxed: 1.7;    /* body prose */
+
+  /* --- LETTER SPACING --- */
+  --tracking-tight:   -0.03em;  /* large display */
+  --tracking-snug:    -0.015em; /* headings */
+  --tracking-normal:  0;
+  --tracking-wide:    0.04em;
+  --tracking-eyebrow: 0.22em;   /* mono uppercase eyebrows */
+}
+
+/* ---- Optional helper classes (use tokens directly in components) ---- */
+.t-display {
+  font-family: var(--font-display);
+  font-weight: var(--weight-bold);
+  font-size: var(--text-display);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--text-heading);
+}
+.t-h2 {
+  font-family: var(--font-display);
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-h2);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-snug);
+  color: var(--text-heading);
+}
+.t-body {
+  font-family: var(--font-body);
+  font-weight: var(--weight-regular);
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  color: var(--text-body);
+}
+.t-eyebrow {
+  font-family: var(--font-mono);
+  font-weight: var(--weight-medium);
+  font-size: var(--text-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--interactive);
+}
+.t-mono {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}

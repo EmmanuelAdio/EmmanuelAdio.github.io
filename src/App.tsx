@@ -1,55 +1,30 @@
+import React from "react";
+
+import NavBar from "./components/NavBar";
+import Hero from "./components/Hero";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
-import Home from "./components/Home";
-import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 
-import React, { useEffect, useRef, useState } from "react";
-
-import 'bootstrap/dist/css/bootstrap.min.css';
-
-function App(){    
-    return (
+/**
+ * Single-page portfolio. Each section renders its own
+ * <section id="top|about|projects|experience|contact">, which is what the
+ * nav hrefs and the scroll-spy in NavBar target.
+ */
+export default function App() {
+  return (
     <>
-    <NavBar></NavBar>
-    <section id="home-section" className="home-section">
-        <Home></Home>
-    </section>
-    
-    <section id="about-section">
-        <About></About>
-    </section>
-    
-    <section id="project-section">
-        <Projects></Projects>
-    </section>
-    
-    <section id="experience-section">
-        <Experience></Experience>
-    </section>
-    
-    <section id="contact-section">
-        <Contact></Contact>
-    </section>
-    
-
-    <footer className="footer">
-    <div className="footer-content">
-        <p>Made with ❤️ by Emmanuel Adio</p>
-        <div className="social-links">
-        <a href="https://github.com/EmmanuelAdio" target="_blank" rel="noopener noreferrer">
-            <img src="./assets/github-logo2.png" alt="GitHub" />
-        </a>
-        <a href="https://www.linkedin.com/in/emmanuel-adio-272097216/" target="_blank" rel="noopener noreferrer">
-            <img src="./assets/linkedin-logo.png" alt="LinkedIn" />
-        </a>
-        </div>
-    </div>
-    </footer>
-
+      <NavBar />
+      <main>
+        <Hero />
+        <About />
+        <Projects />
+        <Experience />
+        <Contact />
+      </main>
+      <Footer />
     </>
-    ); 
+  );
 }
-
-export default App;

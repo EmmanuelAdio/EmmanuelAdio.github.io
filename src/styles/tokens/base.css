@@ -1,0 +1,76 @@
+/* ============================================================
+   BASE — element defaults for the Emmanuel Adio portfolio brand
+   ------------------------------------------------------------
+   Applies the tokens to bare HTML so any page linking styles.css
+   inherits the dark, indigo, techy baseline. Consumers can rely
+   on these defaults or override per-component.
+   ============================================================ */
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background-color: var(--bg-page);
+  color: var(--text-body);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-display);
+  color: var(--text-heading);
+  letter-spacing: var(--tracking-snug);
+  line-height: var(--leading-snug);
+  margin: 0 0 var(--space-4);
+}
+
+p { margin: 0 0 var(--space-4); }
+
+a {
+  color: var(--interactive);
+  text-decoration: none;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+a:hover { color: var(--interactive-hover); }
+
+code, pre, kbd {
+  font-family: var(--font-mono);
+  font-size: 0.95em;
+}
+
+::selection {
+  background: var(--accent-500);
+  color: var(--text-on-accent);
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--ring);
+  border-radius: var(--radius-sm);
+}
+
+/* Brand scrollbar — slim, indigo thumb on void track */
+* { scrollbar-width: thin; scrollbar-color: var(--ink-700) transparent; }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background-color: var(--ink-700);
+  border-radius: var(--radius-pill);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover { background-color: var(--ink-600); }
+
+/* The corona-magenta inline highlight used across the site for
+   emphasised words inside prose. */
+.highlight {
+  color: var(--highlight);
+  font-weight: var(--weight-semibold);
+}

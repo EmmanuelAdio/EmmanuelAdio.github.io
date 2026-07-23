@@ -1,0 +1,89 @@
+/* ============================================================
+   COLORS — Emmanuel Adio Portfolio
+   ------------------------------------------------------------
+   A deep-space, indigo-forward palette. Near-black cool "ink"
+   surfaces, an engineered indigo primary ramp, an electric
+   accent for interaction, and a rare eclipse-corona magenta
+   reserved for highlights. Derived from the live site:
+     text #eaecf5 · background #070913 · primary #3c4eb4
+     secondary #1b2865 · accent #2238a5
+   ============================================================ */
+
+:root {
+  /* --- INK · cool near-black surfaces (darkest → lightest) --- */
+  --ink-1000: #04050d;   /* void / page base behind everything */
+  --ink-950:  #070913;   /* canonical background (site default) */
+  --ink-900:  #0a0d1c;   /* raised surface */
+  --ink-850:  #0e1226;   /* card surface */
+  --ink-800:  #131833;   /* card surface, hover */
+  --ink-700:  #1b2244;   /* elevated panel */
+  --ink-600:  #232c57;   /* hairline-strong / divider */
+
+  /* --- INDIGO · primary brand ramp --- */
+  --indigo-950: #0d1126;
+  --indigo-900: #19214d;
+  --indigo-800: #263273;
+  --indigo-700: #334299;
+  --indigo-600: #3c4eb4;  /* site --primary */
+  --indigo-500: #4d5fcf;
+  --indigo-400: #6675dd;
+  --indigo-300: #8c98e6;
+  --indigo-200: #b3bcf0;
+
+  /* --- ACCENT · electric interaction indigo (glow) --- */
+  --accent-600: #3b4ff0;
+  --accent-500: #5667ff;  /* canonical accent — links, focus, CTAs */
+  --accent-400: #7d8bff;
+
+  /* --- CORONA · eclipse magenta, used sparingly --- */
+  --corona-600: #a8367a;
+  --corona-500: #c8519b;  /* highlight / special accent */
+  --corona-400: #e07bb8;
+
+  /* --- TEXT ramp (on dark surfaces) --- */
+  --text-strong:  #f4f6ff;  /* headings, max contrast */
+  --text:         #eaecf5;  /* body default (site --text) */
+  --text-muted:   #a3abca;  /* secondary copy, captions */
+  --text-faint:   #6a7299;  /* metadata, disabled, placeholders */
+  --text-on-accent: #f4f6ff;
+
+  /* --- LINES & STROKES --- */
+  --line:        rgba(140, 152, 230, 0.14);  /* default hairline */
+  --line-strong: rgba(140, 152, 230, 0.28);  /* emphasized border */
+  --line-accent: var(--accent-500);          /* active/hover border */
+
+  /* --- SEMANTIC STATUS --- */
+  --success: #3ec78a;
+  --warning: #e8b04b;
+  --danger:  #f25c6b;
+  --info:    var(--accent-500);
+
+  /* ============================================================
+     SEMANTIC ALIASES — prefer these in components
+     ============================================================ */
+  --bg-page:        var(--ink-950);
+  --bg-void:        var(--ink-1000);
+  --surface:        var(--ink-850);
+  --surface-raised: var(--ink-800);
+  --surface-sunken: var(--ink-900);
+  --surface-panel:  var(--ink-700);
+
+  --border:         var(--line);
+  --border-strong:  var(--line-strong);
+  --border-active:  var(--line-accent);
+
+  --text-body:      var(--text);
+  --text-heading:   var(--text-strong);
+  --text-secondary: var(--text-muted);
+  --text-tertiary:  var(--text-faint);
+
+  --brand:          var(--indigo-600);
+  --interactive:    var(--accent-500);
+  --interactive-hover: var(--accent-400);
+  --focus-ring:     var(--accent-500);
+  --highlight:      var(--corona-500);
+
+  /* glow color tokens (used in shadows) */
+  --glow-accent: rgba(86, 103, 255, 0.45);
+  --glow-corona: rgba(200, 81, 155, 0.40);
+}
